@@ -1,0 +1,1 @@
+DeepSpeech expects audio files to be WAV format, mono-channel, and with a 16kHz sampling rate.

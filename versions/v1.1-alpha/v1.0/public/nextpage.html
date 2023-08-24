@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion query param</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+
+</head>
+<body>
+    <h1 id="heading">File id: </h1>
+    <script>
+        // Parse the query parameter to get the file name
+        const urlParams = new URLSearchParams(window.location.search);
+        const fileName = urlParams.get('fileName');
+        
+        // Use the fileName as needed
+        console.log('File name:', fileName);
+
+        function getFileId(){
+            return fileName;
+        }
+
+        document.getElementById("heading").innerHTML = "File id: "+ fileName;
+
+      </script>
+    
+</body>
+</html>

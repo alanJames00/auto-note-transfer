@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>AutoNote</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Raleway:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+
+
+
+
+
+
+  <style>
+    .loader {
+  margin-left: 40%;
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #ffd200; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+  .loader-text{
+    margin-left: 2%;
+    margin-top: 4%;
+  }
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+  </style>
+
+
+
+
+
+
+
+
+
+
+  </head>
+
+<body>
+  <header class="pt-5">
+    <div class="container pt-4 pt-xl-5">
+      <div class="row pt-5">
+        <div class="col-md-8 text-center text-md-start mx-auto">
+          <div class="text-center">
+            <h1 class="display-4 fw-bold mb-5">AutoNote&nbsp;<span class="underline">transcribe</span>.</h1>
+            <p class="fs-5 text-muted mb-5">Upload the voice clip below and wait for the magic to happen...</p>
+            
+            
+            
+            <form class="d-flex justify-content-center flex-wrap" action="/upload" method="POST" data-bs-theme="light"  enctype="multipart/form-data">
+              <div class="shadow-lg mb-3"><input class="form-control" type="file" name="fileUpload"
+                  placeholder="Your Email"></div>
+              <div class="shadow-lg mb-3"><button class="btn btn-primary" type="submit" id="uploadButton">Upload&nbsp;</button></div>
+              
+
+            </form>
+            
+            
+            <div class="loader" style="display: none;">
+            </div>
+            <p class="loader-text" style="display: none;">Upload in Progress...</p>
+
+
+          </div>
+        </div>
+        <div class="col-12 col-lg-10 mx-auto">
+          <div class="text-center position-relative"><img class="img-fluid" src="./img/illustrations/20909355_6379087.svg"
+              style="width: 800px;"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section></section>
+  <section></section>
+  <section>
+    <div class="container py-4 py-xl-5">
+      <div class="row gy-4 gy-md-0">
+        <div
+          class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+          <div><img class="rounded img-fluid fit-cover" style="min-height: 300px;"
+              src="/img/illustrations/presentation.svg" width="800"></div>
+        </div>
+        <div class="col">
+          <div style="max-width: 450px;">
+            <h3 class="fw-bold pb-md-4">Our &nbsp;<span class="underline">features</span>
+            </h3>
+            
+            <div class="row gy-4 row-cols-2 row-cols-md-2">
+              <div class="col">
+                <div><span class="fs-2 fw-bold text-primary bg-secondary">1</span>
+                  <p class="fw-normal text-muted">No external APIs</p>
+                </div>
+              </div>
+              <div class="col">
+                <div><span class="fs-2 fw-bold text-primary bg-secondary">2</span>
+                  <p class="fw-normal text-muted">Fast transcribe</p>
+                </div>
+              </div>
+              <div class="col">
+                <div><span class="fs-2 fw-bold text-primary bg-secondary">3</span>
+                  <p class="fw-normal text-muted">No user registration</p>
+                </div>
+              </div>
+              <div class="col">
+                <div><span class="fs-2 fw-bold text-primary bg-secondary">4</span>
+                  <p class="fw-normal text-muted">Seamless workflow</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container py-4 py-lg-5">
+      <hr>
+      <div class="text-muted d-flex justify-content-between align-items-center pt-3">
+        <p class="mb-0">Copyright © 2023 Ctrl-Shift-Hack (Made for ECell - Ideathon)</p>
+        
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/script.min.js"></script>
+
+
+  <script>
+
+    var uploadBtn = document.getElementById("uploadButton");
+    var loadingBar = document.querySelector(".loader");
+    var loadingText = document.querySelector(".loader-text");
+
+
+    uploadBtn.addEventListener("click", ()=>{
+      loadingBar.style.display = "block";
+      loadingText.style.display = "block";
+    })
+
+  </script>
+
+
+
+</body>
+
+</html>
